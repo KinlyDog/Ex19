@@ -3,12 +3,12 @@ public class Level1 {
         int[] maTemp = new int[n * n];
         int count = 0;
 
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i; j++) {
                 int k = i + j;
                 int max = 0;
 
-                for (int t = j; t < k; t++) {
+                for (int t = j; t <= k; t++) {
                     if (ma[t] > max) {
                         max = ma[t];
                     }
