@@ -23,9 +23,7 @@ public class Level1 {
 
         int[] maTrans = new int[count];
 
-        for (int i = 0; i < count; i++) {
-            maTrans[i] = maTemp[i];
-        }
+        System.arraycopy(maTemp, 0, maTrans, 0, count);
 
         return maTrans;
     }
@@ -35,8 +33,8 @@ public class Level1 {
         b = trans(b, b.length);
 
         int sum = 0;
-        for (int i = 0; i < b.length; i++) {
-            sum += b[i];
+        for (int j : b) {
+            sum += j;
         }
 
         return sum % 2 == 0;
